@@ -2,6 +2,7 @@ const User = require('../models/userModels');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const session = require('express-session');
+const jwt = require('jsonwebtoken');
 
 const createUser = (req, res) => {
   const { username, password } = req.body;
@@ -22,8 +23,9 @@ const createUser = (req, res) => {
   })
 });
 
-router.route('/api/login').post((req, res) => {
-  // const user = { username, password } = req.body;
+router.route('/api/user').post((req, res) => {
+  const newLocal = { username, password } = req.body;
+  const user = newLocal;
 
   User.findOne({ username })
     .then(user => {
