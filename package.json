@@ -1,0 +1,8 @@
+{
+  "name": "Sprint-Challenge-Authentication",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mag16/Sprint-Challenge-Authentication.git",
+  "author": "Marco A Guzman <marcoguzman16@gmail.com>",
+  "license": "MIT"
+}

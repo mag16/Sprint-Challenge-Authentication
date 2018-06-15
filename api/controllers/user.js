@@ -23,7 +23,7 @@ const createUser = (req, res) => {
 });
 
 router.route('/api/login').post((req, res) => {
-  const user = ({ username, password }) = req.body;
+  // const user = { username, password } = req.body;
 
   User.findOne({ username })
     .then(user => {
@@ -41,7 +41,7 @@ router.route('/api/login').post((req, res) => {
             }
           })
           .catch(err => {
-            res.send('error comparing passwords');
+            res.send('error');
           });
       } else {
         res.status(401).send('invalid credentials');
